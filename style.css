@@ -200,3 +200,22 @@ a { color: var(--color-accent); }
 .resume-entry__skills { margin-top: 0.5rem; font-size: 0.88rem; color: var(--color-muted); }
 .resume-subsection { margin-top: var(--space-4); }
 .resume-subsection h3 { font-size: 1.2rem; margin-bottom: var(--space-2); }
+
+/* Contact */
+.contact-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.contact-links a { font-weight: 600; }
+
+/* Footer */
+.site-footer {
+  text-align: center;
+  padding: var(--space-3) var(--space-2);
+  color: var(--color-muted);
+  font-size: 0.85rem;
+}
