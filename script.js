@@ -13,7 +13,6 @@
   /* --------------------------------------------------------------------------
      1. Theme Management (Dark / Light)
      -------------------------------------------------------------------------- */
-  var themeToggle = document.getElementById('theme-toggle');
   var storageKey = 'rbm-theme-preference';
 
   function getPreferredTheme() {
@@ -32,22 +31,38 @@
 
   function setTheme(theme) {
     document.documentElement.setAttribute('data-theme', theme);
+    if (document.body) {
+      document.body.setAttribute('data-theme', theme);
+    }
     try {
       localStorage.setItem(storageKey, theme);
     } catch (e) {}
+
+    var nextTheme = theme === 'dark' ? 'light' : 'dark';
+    var themeToggles = document.querySelectorAll('.theme-toggle');
+    themeToggles.forEach(function (btn) {
+      btn.setAttribute('aria-label', 'Switch to ' + nextTheme + ' theme');
+      btn.setAttribute('title', 'Switch to ' + nextTheme + ' theme');
+    });
+
+    var nameLabels = document.querySelectorAll('.theme-current-name');
+    nameLabels.forEach(function (label) {
+      label.textContent = theme === 'dark' ? 'Dark' : 'Light';
+    });
   }
 
   // Initialize theme
   setTheme(getPreferredTheme());
 
-  if (themeToggle) {
-    themeToggle.addEventListener('click', function (e) {
+  var themeButtons = document.querySelectorAll('.theme-toggle');
+  themeButtons.forEach(function (btn) {
+    btn.addEventListener('click', function (e) {
       e.preventDefault();
       var currentTheme = document.documentElement.getAttribute('data-theme') || 'dark';
       var newTheme = currentTheme === 'dark' ? 'light' : 'dark';
       setTheme(newTheme);
     });
-  }
+  });
 
   // Listen for system color scheme changes if user hasn't explicitly set a preference
   if (window.matchMedia) {

@@ -49,7 +49,9 @@
 /* Explicit Dark Theme */
 :root[data-theme="dark"],
 html[data-theme="dark"],
+body[data-theme="dark"],
 [data-theme="dark"] {
+  color-scheme: dark;
   --color-bg: #090d16;
   --color-bg-alt: #0e1526;
   --color-surface: #111a2e;
@@ -76,7 +78,9 @@ html[data-theme="dark"],
 /* Explicit Light Theme (Higher specificity and placed after root) */
 :root[data-theme="light"],
 html[data-theme="light"],
+body[data-theme="light"],
 [data-theme="light"] {
+  color-scheme: light;
   --color-bg: #f8fafc;
   --color-bg-alt: #f1f5f9;
   --color-surface: #ffffff;
@@ -267,6 +271,10 @@ h1, h2, h3, h4 {
   background: var(--color-surface-hover);
 }
 
+.theme-toggle svg {
+  pointer-events: none;
+}
+
 [data-theme="dark"] .icon-moon,
 html[data-theme="dark"] .icon-moon { display: none !important; }
 [data-theme="dark"] .icon-sun,
@@ -275,6 +283,10 @@ html[data-theme="dark"] .icon-sun { display: block !important; }
 html[data-theme="light"] .icon-sun { display: none !important; }
 [data-theme="light"] .icon-moon,
 html[data-theme="light"] .icon-moon { display: block !important; }
+
+.mobile-theme-item {
+  display: none;
+}
 
 /* Header Resume Button */
 .btn--header-resume {
@@ -1352,6 +1364,29 @@ html[data-theme="light"] .icon-moon { display: block !important; }
 
   .btn--header-resume {
     display: none;
+  }
+
+  .mobile-theme-item {
+    display: block;
+    margin-top: 0.5rem;
+    padding-top: 0.75rem;
+    border-top: 1px solid var(--color-border);
+  }
+
+  .mobile-theme-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0.75rem 1rem;
+    background: var(--color-bg-alt);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    color: var(--color-fg);
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: inherit;
   }
 
   .timeline {
