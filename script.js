@@ -17,23 +17,32 @@
   var storageKey = 'rbm-theme-preference';
 
   function getPreferredTheme() {
-    var savedTheme = localStorage.getItem(storageKey);
-    if (savedTheme) {
-      return savedTheme;
+    try {
+      var savedTheme = localStorage.getItem(storageKey);
+      if (savedTheme === 'light' || savedTheme === 'dark') {
+        return savedTheme;
+      }
+    } catch (e) {}
+
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
+      return 'light';
     }
-    return window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+    return 'dark';
   }
 
   function setTheme(theme) {
     document.documentElement.setAttribute('data-theme', theme);
-    localStorage.setItem(storageKey, theme);
+    try {
+      localStorage.setItem(storageKey, theme);
+    } catch (e) {}
   }
 
   // Initialize theme
   setTheme(getPreferredTheme());
 
   if (themeToggle) {
-    themeToggle.addEventListener('click', function () {
+    themeToggle.addEventListener('click', function (e) {
+      e.preventDefault();
       var currentTheme = document.documentElement.getAttribute('data-theme') || 'dark';
       var newTheme = currentTheme === 'dark' ? 'light' : 'dark';
       setTheme(newTheme);
@@ -41,11 +50,22 @@
   }
 
   // Listen for system color scheme changes if user hasn't explicitly set a preference
-  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function (e) {
-    if (!localStorage.getItem(storageKey)) {
-      setTheme(e.matches ? 'dark' : 'light');
+  if (window.matchMedia) {
+    var mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+    var handleSystemThemeChange = function (e) {
+      try {
+        if (!localStorage.getItem(storageKey)) {
+          setTheme(e.matches ? 'dark' : 'light');
+        }
+      } catch (err) {}
+    };
+
+    if (mediaQuery.addEventListener) {
+      mediaQuery.addEventListener('change', handleSystemThemeChange);
+    } else if (mediaQuery.addListener) {
+      mediaQuery.addListener(handleSystemThemeChange);
     }
-  });
+  }
 
   /* --------------------------------------------------------------------------
      2. Mobile Navigation Toggle

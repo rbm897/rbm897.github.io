@@ -21,9 +21,61 @@
   --transition-fast: 0.15s ease;
   --transition-normal: 0.25s ease;
   --transition-slow: 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* Dark Theme Tokens (Default) */
+  --color-bg: #090d16;
+  --color-bg-alt: #0e1526;
+  --color-surface: #111a2e;
+  --color-surface-hover: #16223b;
+  --color-surface-translucent: rgba(17, 26, 46, 0.85);
+  --color-fg: #f1f5f9;
+  --color-fg-muted: #94a3b8;
+  --color-fg-subtle: #64748b;
+  --color-border: #1e293b;
+  --color-border-hover: #334155;
+  --color-accent: #38bdf8;
+  --color-accent-hover: #7dd3fc;
+  --color-accent-fg: #090d16;
+  --color-accent-subtle: rgba(56, 189, 248, 0.12);
+  --color-accent-border: rgba(56, 189, 248, 0.25);
+  --color-badge-bg: rgba(56, 189, 248, 0.12);
+  --color-badge-fg: #38bdf8;
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 12px 28px rgba(0, 0, 0, 0.5);
+  --hero-glow: radial-gradient(circle at 50% 0%, rgba(56, 189, 248, 0.16) 0%, rgba(9, 13, 22, 0) 70%);
 }
 
-/* Light Theme */
+/* Explicit Dark Theme */
+:root[data-theme="dark"],
+html[data-theme="dark"],
+[data-theme="dark"] {
+  --color-bg: #090d16;
+  --color-bg-alt: #0e1526;
+  --color-surface: #111a2e;
+  --color-surface-hover: #16223b;
+  --color-surface-translucent: rgba(17, 26, 46, 0.85);
+  --color-fg: #f1f5f9;
+  --color-fg-muted: #94a3b8;
+  --color-fg-subtle: #64748b;
+  --color-border: #1e293b;
+  --color-border-hover: #334155;
+  --color-accent: #38bdf8;
+  --color-accent-hover: #7dd3fc;
+  --color-accent-fg: #090d16;
+  --color-accent-subtle: rgba(56, 189, 248, 0.12);
+  --color-accent-border: rgba(56, 189, 248, 0.25);
+  --color-badge-bg: rgba(56, 189, 248, 0.12);
+  --color-badge-fg: #38bdf8;
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 12px 28px rgba(0, 0, 0, 0.5);
+  --hero-glow: radial-gradient(circle at 50% 0%, rgba(56, 189, 248, 0.16) 0%, rgba(9, 13, 22, 0) 70%);
+}
+
+/* Explicit Light Theme (Higher specificity and placed after root) */
+:root[data-theme="light"],
+html[data-theme="light"],
 [data-theme="light"] {
   --color-bg: #f8fafc;
   --color-bg-alt: #f1f5f9;
@@ -46,32 +98,6 @@
   --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.07), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
   --shadow-lg: 0 12px 24px -4px rgba(0, 0, 0, 0.08), 0 4px 8px -2px rgba(0, 0, 0, 0.04);
   --hero-glow: radial-gradient(circle at 50% 0%, rgba(14, 165, 233, 0.12) 0%, rgba(248, 250, 252, 0) 70%);
-}
-
-/* Dark Theme (Default) */
-:root,
-[data-theme="dark"] {
-  --color-bg: #090d16;
-  --color-bg-alt: #0e1526;
-  --color-surface: #111a2e;
-  --color-surface-hover: #16223b;
-  --color-surface-translucent: rgba(17, 26, 46, 0.8);
-  --color-fg: #f1f5f9;
-  --color-fg-muted: #94a3b8;
-  --color-fg-subtle: #64748b;
-  --color-border: #1e293b;
-  --color-border-hover: #334155;
-  --color-accent: #38bdf8;
-  --color-accent-hover: #7dd3fc;
-  --color-accent-fg: #090d16;
-  --color-accent-subtle: rgba(56, 189, 248, 0.12);
-  --color-accent-border: rgba(56, 189, 248, 0.25);
-  --color-badge-bg: rgba(56, 189, 248, 0.12);
-  --color-badge-fg: #38bdf8;
-  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
-  --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.4);
-  --shadow-lg: 0 12px 28px rgba(0, 0, 0, 0.5);
-  --hero-glow: radial-gradient(circle at 50% 0%, rgba(56, 189, 248, 0.16) 0%, rgba(9, 13, 22, 0) 70%);
 }
 
 /* --------------------------------------------------------------------------
@@ -241,10 +267,14 @@ h1, h2, h3, h4 {
   background: var(--color-surface-hover);
 }
 
-[data-theme="dark"] .icon-moon { display: none; }
-[data-theme="dark"] .icon-sun { display: block; }
-[data-theme="light"] .icon-sun { display: none; }
-[data-theme="light"] .icon-moon { display: block; }
+[data-theme="dark"] .icon-moon,
+html[data-theme="dark"] .icon-moon { display: none !important; }
+[data-theme="dark"] .icon-sun,
+html[data-theme="dark"] .icon-sun { display: block !important; }
+[data-theme="light"] .icon-sun,
+html[data-theme="light"] .icon-sun { display: none !important; }
+[data-theme="light"] .icon-moon,
+html[data-theme="light"] .icon-moon { display: block !important; }
 
 /* Header Resume Button */
 .btn--header-resume {
