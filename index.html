@@ -1,184 +1,905 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Ram Bhajan Mishra — Senior DevOps Engineer</title>
-<meta name="description" content="Personal profile and resume of Ram Bhajan Mishra, Senior DevOps Engineer with 7+ years of experience in CI/CD, cloud infrastructure, and observability." />
-<link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ram Bhajan Mishra — Senior DevOps &amp; Cloud Platform Engineer</title>
+  <meta name="description" content="Senior DevOps and Cloud Platform Engineer with 8+ years experience in AWS, Kubernetes, Terraform, ArgoCD, CI/CD, Observability, and AI-enabled automation." />
+  <meta name="keywords" content="Ram Bhajan Mishra, Senior DevOps Engineer, Cloud Platform Engineer, AWS, Kubernetes, Terraform, ArgoCD, Commonwealth Bank, Platform Engineering" />
+  <meta name="author" content="Ram Bhajan Mishra" />
+  
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Ram Bhajan Mishra — Senior DevOps &amp; Cloud Platform Engineer" />
+  <meta property="og:description" content="8+ years building enterprise cloud infrastructure, GitOps pipelines, observability stacks, and AI workflows. Currently Senior DevOps Engineer at Commonwealth Bank of Australia." />
+  <meta property="og:url" content="https://rbm897.github.io" />
+
+  <!-- Fonts & Stylesheet -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body id="top">
-<nav class="nav">
-  <div class="nav__inner">
-    <a class="nav__brand" href="#top">RBM</a>
-    <button id="nav-toggle" class="nav__toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Toggle menu">☰</button>
-    <ul id="nav-links" class="nav__links">
-      <li><a href="#about">About</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#resume">Resume</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
+
+  <!-- Accessible Skip Link -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Header / Navigation -->
+  <header class="header">
+    <nav class="nav" aria-label="Main Navigation">
+      <div class="nav__inner">
+        <a class="nav__brand" href="#top" aria-label="Ram Bhajan Mishra Home">
+          <span class="brand-code">&lt;</span><span class="brand-name">RBM</span><span class="brand-code">/&gt;</span>
+        </a>
+
+        <div class="nav__center">
+          <ul id="nav-links" class="nav__links">
+            <li><a href="#about" class="nav__link">About</a></li>
+            <li><a href="#experience" class="nav__link">Experience</a></li>
+            <li><a href="#skills" class="nav__link">Skills</a></li>
+            <li><a href="#projects" class="nav__link">Projects</a></li>
+            <li><a href="#certifications" class="nav__link">Credentials</a></li>
+            <li><a href="#contact" class="nav__link">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="nav__actions">
+          <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle color theme" title="Toggle theme">
+            <!-- Sun icon (shown in dark mode) -->
+            <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
+            <!-- Moon icon (shown in light mode) -->
+            <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+          </button>
+
+          <a class="btn btn--header-resume" href="assets/resume.pdf" download="Resume_Ram_Bhajan_Mishra.pdf">
+            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            <span>Resume</span>
+          </a>
+
+          <button id="nav-toggle" class="nav__toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Toggle navigation menu">
+            <span class="hamburger-bar"></span>
+            <span class="hamburger-bar"></span>
+            <span class="hamburger-bar"></span>
+          </button>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <!-- Hero Section -->
+    <section id="about" class="hero">
+      <div class="hero__glow" aria-hidden="true"></div>
+      <div class="hero__inner">
+        <div class="hero__status-badge">
+          <span class="status-dot"></span>
+          <span>Senior DevOps Engineer &bull; <strong>Commonwealth Bank of Australia</strong></span>
+        </div>
+
+        <h1 class="hero__name">Ram Bhajan Mishra</h1>
+        <p class="hero__title">Senior DevOps &amp; Cloud Platform Engineer</p>
+
+        <p class="hero__bio">
+          Outcome-driven engineer with <strong>8+ years of experience</strong> architecting resilient cloud platforms, 
+          enterprise Kubernetes clusters, and automated GitOps CI/CD pipelines. Proven track record in 
+          infrastructure-as-code, security hardening, cloud cost optimization (<strong>40% reduction</strong>), 
+          end-to-end observability, and pioneering <strong>AI-enabled workflows</strong> across tier-1 financial institutions.
+        </p>
+
+        <div class="hero__cta-group">
+          <a class="btn btn--primary" href="assets/resume.pdf" download="Resume_Ram_Bhajan_Mishra.pdf">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            <span>Download Resume PDF</span>
+          </a>
+          <a class="btn btn--secondary" href="#experience">
+            <span>Explore Experience</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+          </a>
+          <button class="btn btn--outline copy-btn" data-copy="rbm897@gmail.com" type="button" aria-label="Copy email address to clipboard">
+            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+            <span>Copy Email</span>
+          </button>
+        </div>
+
+        <div class="hero__links">
+          <a class="hero-link" href="mailto:rbm897@gmail.com" title="Email Ram Bhajan Mishra">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+            <span>rbm897@gmail.com</span>
+          </a>
+          <span class="hero-link-sep" aria-hidden="true">&bull;</span>
+          <a class="hero-link" href="https://linkedin.com/in/rbm897" target="_blank" rel="noopener noreferrer" title="LinkedIn Profile">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+            <span>linkedin.com/in/rbm897</span>
+          </a>
+          <span class="hero-link-sep" aria-hidden="true">&bull;</span>
+          <a class="hero-link" href="https://github.com/rbm897" target="_blank" rel="noopener noreferrer" title="GitHub Profile">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+            <span>github.com/rbm897</span>
+          </a>
+          <span class="hero-link-sep" aria-hidden="true">&bull;</span>
+          <button class="hero-link hero-link--btn copy-btn" data-copy="(+91) 9453038531" type="button" title="Copy Phone Number">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <span>(+91) 9453038531</span>
+          </button>
+        </div>
+
+        <!-- Metric Highlights Banner -->
+        <div class="metrics-grid">
+          <div class="metric-card">
+            <div class="metric-card__value">8+ Years</div>
+            <div class="metric-card__label">DevOps &amp; Cloud Platform Engineering</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-card__value">40%</div>
+            <div class="metric-card__label">Cloud Cost Reduction via Automated Dev-Hours Tool</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-card__value">1–2 Hours</div>
+            <div class="metric-card__label">Net-New Environment Setup via Multi-Helm Tool</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-card__value">AWS SAA</div>
+            <div class="metric-card__label">Certified Solutions Architect &bull; Associate (Active)</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Core Engineering Pillars -->
+    <section class="section section--pillars">
+      <div class="section__inner">
+        <div class="section__header">
+          <span class="section__eyebrow">Core Expertise</span>
+          <h2 class="section__title">Platform Engineering Pillars</h2>
+          <p class="section__subtitle">Specialized technical domains built across high-scale enterprise banking environments.</p>
+        </div>
+
+        <div class="pillars-grid">
+          <div class="pillar-card">
+            <div class="pillar-card__icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"/></svg>
+            </div>
+            <h3 class="pillar-card__title">Cloud Infrastructure &amp; IaC</h3>
+            <p class="pillar-card__desc">
+              Designing modular, declarative cloud infrastructure using <strong>Terraform</strong> and <strong>Crossplane</strong>. Experience orchestrating multi-region AWS architectures (EKS, RDS, OpenSearch, S3) with automated disaster recovery and zero-downtime migrations.
+            </p>
+            <div class="pillar-card__tags">
+              <span>AWS</span><span>Terraform</span><span>Crossplane</span><span>IaC Modules</span>
+            </div>
+          </div>
+
+          <div class="pillar-card">
+            <div class="pillar-card__icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m4.93 4.93 4.24 4.24"/><path d="m14.83 9.17 4.24-4.24"/><path d="m14.83 14.83 4.24 4.24"/><path d="m9.17 14.83-4.24 4.24"/><circle cx="12" cy="12" r="4"/></svg>
+            </div>
+            <h3 class="pillar-card__title">Kubernetes &amp; GitOps</h3>
+            <p class="pillar-card__desc">
+              Enterprise cluster lifecycle management, in-place and blue-green upgrades (EKS 1.21 &rarr; 1.25). Standardizing deployments with <strong>ArgoCD</strong>, <strong>Helm</strong>, and <strong>Helmfile</strong>, complemented by policy-as-code enforcement via <strong>Kyverno</strong>.
+            </p>
+            <div class="pillar-card__tags">
+              <span>Kubernetes (EKS)</span><span>ArgoCD</span><span>Helm / Helmfile</span><span>Kyverno</span>
+            </div>
+          </div>
+
+          <div class="pillar-card">
+            <div class="pillar-card__icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+            </div>
+            <h3 class="pillar-card__title">Observability &amp; Reliability</h3>
+            <p class="pillar-card__desc">
+              Building full-stack observability with <strong>Prometheus</strong>, <strong>Grafana</strong>, and <strong>OpenTelemetry</strong>. Centralizing distributed telemetry with Fluent-bit, OpenSearch, and Sumo Logic for proactive alerting, SLO monitoring, and incident mitigation.
+            </p>
+            <div class="pillar-card__tags">
+              <span>Prometheus</span><span>Grafana</span><span>OpenTelemetry</span><span>OpenSearch</span>
+            </div>
+          </div>
+
+          <div class="pillar-card">
+            <div class="pillar-card__icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4"/><path d="m4.93 4.93 2.83 2.83"/><path d="M2 12h4"/><path d="m4.93 19.07 2.83-2.83"/><path d="M12 18v4"/><path d="m16.24 16.24 2.83 2.83"/><path d="M18 12h4"/><path d="m16.24 7.76 2.83-2.83"/></svg>
+            </div>
+            <h3 class="pillar-card__title">AI Workflows &amp; Automation</h3>
+            <p class="pillar-card__desc">
+              Building custom internal tools and AI-enabled operational workflows leveraging <strong>Claude and autonomous agents</strong> for executive tracking. Proficient in developing high-throughput automation with <strong>Go</strong> and <strong>Python</strong>.
+            </p>
+            <div class="pillar-card__tags">
+              <span>Claude AI &amp; Agents</span><span>Go</span><span>Python</span><span>Airflow</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience / Career Timeline -->
+    <section id="experience" class="section">
+      <div class="section__inner">
+        <div class="section__header">
+          <span class="section__eyebrow">Track Record</span>
+          <h2 class="section__title">Work Experience</h2>
+          <p class="section__subtitle">8+ years of engineering impact in enterprise banking, fintech, and digital transformation.</p>
+        </div>
+
+        <div class="timeline">
+          <!-- CBA -->
+          <article class="timeline-item">
+            <div class="timeline-marker" aria-hidden="true"></div>
+            <div class="timeline-card">
+              <header class="timeline-card__header">
+                <div class="timeline-card__titles">
+                  <h3 class="timeline-card__role">Senior DevOps Engineer</h3>
+                  <div class="timeline-card__company">
+                    <span class="company-name">Commonwealth Bank of Australia</span>
+                    <span class="badge badge--primary">Enterprise Transformation</span>
+                  </div>
+                </div>
+                <div class="timeline-card__period">
+                  <span class="period-pill">Dec 2024 &ndash; Present</span>
+                </div>
+              </header>
+
+              <div class="timeline-card__body">
+                <ul class="achievement-list">
+                  <li>
+                    <strong>Founding DevOps Leadership:</strong> Provided DevOps technical leadership and guided offshore engineering teams while architecting the <strong>Service Domain Portal</strong> from the ground up for CBA’s Enterprise Transformation Program. Established core CI/CD automation pipelines that were subsequently reused across the <strong>Direct Debit Orchestration</strong> project under the Payments Domain.
+                  </li>
+                  <li>
+                    <strong>AI-Driven Dashboards &amp; Workflows:</strong> Collaborated closely with executive-level leaders to capture strategic requirements and fulfilled them by building AI-enabled workflows (leveraging <strong>Claude and autonomous agents</strong>) to dynamically track program milestones and transformation velocity.
+                  </li>
+                  <li>
+                    <strong>Enterprise AWS Cloud Infrastructure:</strong> Architected and provisioned secure, scalable AWS infrastructure resources via IaC, including <strong>EKS, RDS, S3, Application Load Balancers (ALB), and Network Load Balancers (NLB)</strong>.
+                  </li>
+                  <li>
+                    <strong>Open-Source Enterprise Platform Hosting:</strong> Deployed and customized mission-critical platforms—including <strong>Keycloak</strong> (IAM/OIDC), <strong>Apache Airflow</strong> (workflow orchestration), and <strong>PgAdmin</strong>—to align with strict organizational security and compliance policies.
+                  </li>
+                  <li>
+                    <strong>End-to-End Observability Stack:</strong> Built a centralized observability platform using <strong>Prometheus, Grafana, and OpenTelemetry</strong> with Microsoft Teams real-time alerting and platform health dashboards; expanded the platform into the Payments domain to deploy and monitor a new payment orchestration service.
+                  </li>
+                  <li>
+                    <strong>Platform Security &amp; Compliance Hardening:</strong> Standardized production release processes and remediated container and cluster vulnerabilities using policy-as-code with <strong>Kyverno</strong> and secret governance with <strong>HashiCorp Vault</strong>.
+                  </li>
+                </ul>
+
+                <div class="tech-stack-group">
+                  <span class="tech-stack-label">Key Technologies:</span>
+                  <div class="tag-cloud">
+                    <span class="tag">Go</span>
+                    <span class="tag">Python</span>
+                    <span class="tag">Shell Scripting</span>
+                    <span class="tag">AWS</span>
+                    <span class="tag">ArgoCD</span>
+                    <span class="tag">Kubernetes</span>
+                    <span class="tag">Docker</span>
+                    <span class="tag">Terraform</span>
+                    <span class="tag">HashiCorp Vault</span>
+                    <span class="tag">Helm</span>
+                    <span class="tag">Helmfile</span>
+                    <span class="tag">GitHub Actions</span>
+                    <span class="tag">Kyverno</span>
+                    <span class="tag">Airflow</span>
+                    <span class="tag">Keycloak</span>
+                    <span class="tag">OpenTelemetry</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Standard Chartered Nexus -->
+          <article class="timeline-item">
+            <div class="timeline-marker" aria-hidden="true"></div>
+            <div class="timeline-card">
+              <header class="timeline-card__header">
+                <div class="timeline-card__titles">
+                  <h3 class="timeline-card__role">Cloud Platform Engineer</h3>
+                  <div class="timeline-card__company">
+                    <span class="company-name">Standard Chartered Nexus</span>
+                    <span class="badge badge--accent">Digital Banking Platform</span>
+                  </div>
+                </div>
+                <div class="timeline-card__period">
+                  <span class="period-pill">Jul 2021 &ndash; Dec 2024</span>
+                </div>
+              </header>
+
+              <div class="timeline-card__body">
+                <ul class="achievement-list">
+                  <li>
+                    <strong>Reusable IaC Modules:</strong> Engineered declarative, reusable AWS Terraform modules empowering application teams to provision production infrastructure (RDS, OpenSearch, EKS NodeGroups, S3) seamlessly using simple YAML specifications.
+                  </li>
+                  <li>
+                    <strong>Environment Orchestration Tool:</strong> Developed an internal deployment tool capable of orchestrating multiple Helm releases within a single unified pipeline execution, slashing net-new environment setup time down to <strong>1&ndash;2 hours</strong>.
+                  </li>
+                  <li>
+                    <strong>Cloud Cost Optimization (40% Savings):</strong> Built an automated environment scheduling application restricting non-production availability strictly to business hours with on-demand self-service scaling. Reduced cloud environment running costs by <strong>40%</strong>.
+                  </li>
+                  <li>
+                    <strong>Network Configuration as Code:</strong> Built an application to manage system-to-system firewall rules and port openings declaratively in code, creating a transparent, version-controlled audit trail that expedited compliance approvals.
+                  </li>
+                  <li>
+                    <strong>EKS Cluster Upgrades:</strong> Upgraded mission-critical AWS EKS clusters from <strong>1.21 to 1.22</strong> (in-place) and subsequently from <strong>1.22 to 1.25</strong> utilizing a blue-green migration strategy to guarantee zero downtime.
+                  </li>
+                  <li>
+                    <strong>Cross-Region Lift &amp; Shift Migration:</strong> Spearheaded the cross-region migration of an entire multi-tier application stack and live data in AWS to satisfy stringent cross-border regulatory and compliance requirements.
+                  </li>
+                  <li>
+                    <strong>Centralized Telemetry Pipeline:</strong> Implemented an end-to-end logging infrastructure using <strong>Fluent-bit, OpenSearch, and OpenSearch Dashboards</strong> to ingest and index distributed microservice telemetry.
+                  </li>
+                  <li>
+                    <strong>SSL/TLS Certificate Automation:</strong> Owned automated SSL/TLS certificate procurement, deployment, auto-renewal, and diagnostic workflows across all ingress endpoints.
+                  </li>
+                  <li>
+                    <strong>Enterprise Multi-Environment Governance:</strong> Maintained and ensured high availability across <strong>10+ heterogeneous environments</strong> spanning development, integration, staging, and production.
+                  </li>
+                  <li>
+                    <strong>Cross-Cloud CI/CD &amp; Infra Provisioning:</strong> Designed Continuous Integration and Continuous Deployment (CI/CD) pipelines across <strong>Jenkins, ArgoCD, and Azure DevOps</strong> using Terraform and <strong>Crossplane</strong>.
+                  </li>
+                </ul>
+
+                <div class="tech-stack-group">
+                  <span class="tech-stack-label">Key Technologies:</span>
+                  <div class="tag-cloud">
+                    <span class="tag">Go</span>
+                    <span class="tag">Python</span>
+                    <span class="tag">Shell Scripting</span>
+                    <span class="tag">AWS</span>
+                    <span class="tag">Azure</span>
+                    <span class="tag">Terraform</span>
+                    <span class="tag">Crossplane</span>
+                    <span class="tag">Kubernetes</span>
+                    <span class="tag">Docker</span>
+                    <span class="tag">ArgoCD</span>
+                    <span class="tag">Jenkins</span>
+                    <span class="tag">Azure DevOps</span>
+                    <span class="tag">OpenSearch</span>
+                    <span class="tag">Fluent-bit</span>
+                    <span class="tag">Prometheus</span>
+                    <span class="tag">Grafana</span>
+                    <span class="tag">Postgres</span>
+                    <span class="tag">Cassandra</span>
+                    <span class="tag">Solace</span>
+                    <span class="tag">Sumo Logic</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Mach-X -->
+          <article class="timeline-item">
+            <div class="timeline-marker" aria-hidden="true"></div>
+            <div class="timeline-card">
+              <header class="timeline-card__header">
+                <div class="timeline-card__titles">
+                  <h3 class="timeline-card__role">Full Stack Developer</h3>
+                  <div class="timeline-card__company">
+                    <span class="company-name">Mach-X Private Limited</span>
+                    <span class="badge badge--muted">Fintech Platform</span>
+                  </div>
+                </div>
+                <div class="timeline-card__period">
+                  <span class="period-pill">Feb 2020 &ndash; Jun 2021</span>
+                </div>
+              </header>
+
+              <div class="timeline-card__body">
+                <ul class="achievement-list">
+                  <li>
+                    <strong>Full-Stack Cloud Architecture:</strong> Built and deployed full-stack web applications on AWS EC2 across dual environments, running services as Docker containers behind load balancers with high availability, responsive React interfaces, and Node.js / Flask REST APIs.
+                  </li>
+                  <li>
+                    <strong>Asynchronous Pipelines &amp; PDF ML Parsing:</strong> Engineered async task workers using Python polling AWS SQS queues. Developed an automated financial PDF parsing engine transforming unstructured bank and financial statements into structured datasets to feed predictive machine learning risk models for institutional investors.
+                  </li>
+                </ul>
+
+                <div class="tech-stack-group">
+                  <span class="tech-stack-label">Key Technologies:</span>
+                  <div class="tag-cloud">
+                    <span class="tag">React JS</span>
+                    <span class="tag">Redux</span>
+                    <span class="tag">Node JS</span>
+                    <span class="tag">Express JS</span>
+                    <span class="tag">Python</span>
+                    <span class="tag">Flask</span>
+                    <span class="tag">AWS EC2</span>
+                    <span class="tag">SQS / SNS</span>
+                    <span class="tag">Docker</span>
+                    <span class="tag">MySQL</span>
+                    <span class="tag">R</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- TCS -->
+          <article class="timeline-item">
+            <div class="timeline-marker" aria-hidden="true"></div>
+            <div class="timeline-card">
+              <header class="timeline-card__header">
+                <div class="timeline-card__titles">
+                  <h3 class="timeline-card__role">Assistant System Engineer</h3>
+                  <div class="timeline-card__company">
+                    <span class="company-name">Tata Consultancy Services (TCS)</span>
+                    <span class="badge badge--muted">Enterprise Solutions</span>
+                  </div>
+                </div>
+                <div class="timeline-card__period">
+                  <span class="period-pill">Jul 2018 &ndash; Jan 2020</span>
+                </div>
+              </header>
+
+              <div class="timeline-card__body">
+                <ul class="achievement-list">
+                  <li>
+                    <strong>Automated Financial Data Pipelines:</strong> Engineered data pipelines automating the enterprise expense reimbursement process, streamlining data flow across departments.
+                  </li>
+                  <li>
+                    <strong>Operational Error Elimination:</strong> Eliminated manual human error in critical financial processing systems by designing and executing automated Python and Shell scripts.
+                  </li>
+                </ul>
+
+                <div class="tech-stack-group">
+                  <span class="tech-stack-label">Key Technologies:</span>
+                  <div class="tag-cloud">
+                    <span class="tag">Python</span>
+                    <span class="tag">Shell Scripting</span>
+                    <span class="tag">Oracle DB</span>
+                    <span class="tag">SQL</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Matrix Section -->
+    <section id="skills" class="section section--alt">
+      <div class="section__inner">
+        <div class="section__header">
+          <span class="section__eyebrow">Technical Capabilities</span>
+          <h2 class="section__title">Skills &amp; Technology Stack</h2>
+          <p class="section__subtitle">Core competencies across cloud engineering, container orchestration, IaC, and systems automation.</p>
+        </div>
+
+        <!-- Filter Buttons -->
+        <div class="skills-filter-nav" role="tablist" aria-label="Skills Filter">
+          <button class="filter-btn is-active" data-filter="all" type="button" role="tab" aria-selected="true">All Technologies</button>
+          <button class="filter-btn" data-filter="cloud-iac" type="button" role="tab" aria-selected="false">Cloud &amp; IaC</button>
+          <button class="filter-btn" data-filter="containers-cicd" type="button" role="tab" aria-selected="false">Containers &amp; CI/CD</button>
+          <button class="filter-btn" data-filter="observability-sec" type="button" role="tab" aria-selected="false">Observability &amp; Security</button>
+          <button class="filter-btn" data-filter="languages-scripting" type="button" role="tab" aria-selected="false">Languages &amp; Scripting</button>
+          <button class="filter-btn" data-filter="databases-data" type="button" role="tab" aria-selected="false">Databases &amp; Messaging</button>
+        </div>
+
+        <div class="skills-grid" id="skills-grid">
+          <!-- Cloud & IaC -->
+          <div class="skill-category-card" data-category="cloud-iac">
+            <div class="skill-category-card__header">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"/></svg>
+              <h3>Cloud Providers</h3>
+            </div>
+            <div class="chip-container">
+              <span class="chip chip--accent">AWS (EKS, RDS, S3, ALB, NLB, EC2, SQS, SNS)</span>
+              <span class="chip">Microsoft Azure</span>
+            </div>
+          </div>
+
+          <div class="skill-category-card" data-category="cloud-iac">
+            <div class="skill-category-card__header">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="8" height="8" x="3" y="3" rx="2"/><path d="M7 11v4a2 2 0 0 0 2 2h4"/><rect width="8" height="8" x="13" y="13" rx="2"/></svg>
+              <h3>Infrastructure as Code</h3>
+            </div>
+            <div class="chip-container">
+              <span class="chip chip--accent">Terraform &amp; Reusable Modules</span>
+              <span class="chip chip--accent">Crossplane</span>
+              <span class="chip">Helm</span>
+              <span class="chip">Helmfile</span>
+            </div>
+          </div>
+
+          <!-- Containers & CI/CD -->
+          <div class="skill-category-card" data-category="containers-cicd">
+            <div class="skill-category-card__header">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m4.93 4.93 4.24 4.24"/><path d="m14.83 9.17 4.24-4.24"/><path d="m14.83 14.83 4.24 4.24"/><path d="m9.17 14.83-4.24 4.24"/><circle cx="12" cy="12" r="4"/></svg>
+              <h3>Container Orchestration</h3>
+            </div>
+            <div class="chip-container">
+              <span class="chip chip--accent">Kubernetes (EKS Upgrades 1.21 &rarr; 1.25)</span>
+              <span class="chip">Docker</span>
+              <span class="chip">Blue-Green Deployments</span>
+              <span class="chip">Multi-Environment Clusters</span>
+            </div>
+          </div>
+
+          <div class="skill-category-card" data-category="containers-cicd">
+            <div class="skill-category-card__header">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+              <h3>CI/CD &amp; GitOps</h3>
+            </div>
+            <div class="chip-container">
+              <span class="chip chip--accent">ArgoCD</span>
+              <span class="chip">GitHub Actions</span>
+              <span class="chip">Jenkins</span>
+              <span class="chip">Azure DevOps (ADO)</span>
+              <span class="chip">Git / SVN</span>
+            </div>
+          </div>
+
+          <!-- Observability & Security -->
+          <div class="skill-category-card" data-category="observability-sec">
+            <div class="skill-category-card__header">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+              <h3>Observability &amp; Telemetry</h3>
+            </div>
+            <div class="chip-container">
+              <span class="chip chip--accent">Prometheus</span>
+              <span class="chip chip--accent">Grafana</span>
+              <span class="chip chip--accent">OpenTelemetry</span>
+              <span class="chip">OpenSearch &amp; Dashboards</span>
+              <span class="chip">Fluent-bit</span>
+              <span class="chip">Sumo Logic</span>
+              <span class="chip">Kibana</span>
+            </div>
+          </div>
+
+          <div class="skill-category-card" data-category="observability-sec">
+            <div class="skill-category-card__header">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              <h3>Security &amp; Governance</h3>
+            </div>
+            <div class="chip-container">
+              <span class="chip chip--accent">HashiCorp Vault</span>
+              <span class="chip chip--accent">Kyverno Policy Enforcement</span>
+              <span class="chip">Keycloak (IAM/OIDC)</span>
+              <span class="chip">SSL/TLS Lifecycle Automation</span>
+              <span class="chip">Penetration Test Remediation</span>
+            </div>
+          </div>
+
+          <!-- Languages & Scripting -->
+          <div class="skill-category-card" data-category="languages-scripting">
+            <div class="skill-category-card__header">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="4 17 10 11 4 5"/><line x1="12" y1="19" x2="20" y2="19"/></svg>
+              <h3>Languages &amp; Automation</h3>
+            </div>
+            <div class="chip-container">
+              <span class="chip chip--accent">Go (Golang)</span>
+              <span class="chip chip--accent">Python</span>
+              <span class="chip chip--accent">Shell / Bash Scripting</span>
+              <span class="chip">JavaScript / Node.js</span>
+              <span class="chip">C / C++</span>
+              <span class="chip">Java</span>
+            </div>
+          </div>
+
+          <div class="skill-category-card" data-category="languages-scripting">
+            <div class="skill-category-card__header">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2a10 10 0 1 0 10 10H12V2Z"/><path d="M12 12 2.1 10a10 10 0 0 0 9.9 9.9V12Z"/></svg>
+              <h3>AI &amp; Workflow Orchestration</h3>
+            </div>
+            <div class="chip-container">
+              <span class="chip chip--accent">Claude &amp; Autonomous Agents</span>
+              <span class="chip chip--accent">Apache Airflow</span>
+              <span class="chip">React &amp; Redux</span>
+              <span class="chip">Flask &amp; Express APIs</span>
+            </div>
+          </div>
+
+          <!-- Databases & Messaging -->
+          <div class="skill-category-card" data-category="databases-data">
+            <div class="skill-category-card__header">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/><path d="M3 12c0 1.66 4 3 9 3s9-1.34 9-3"/></svg>
+              <h3>Databases &amp; Storage</h3>
+            </div>
+            <div class="chip-container">
+              <span class="chip">PostgreSQL</span>
+              <span class="chip">MySQL</span>
+              <span class="chip">Apache Cassandra</span>
+              <span class="chip">Oracle DB</span>
+              <span class="chip">MongoDB</span>
+              <span class="chip">AWS S3 &amp; RDS</span>
+            </div>
+          </div>
+
+          <div class="skill-category-card" data-category="databases-data">
+            <div class="skill-category-card__header">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg>
+              <h3>Messaging &amp; Collaboration</h3>
+            </div>
+            <div class="chip-container">
+              <span class="chip">AWS SQS &amp; SNS</span>
+              <span class="chip">Solace PubSub+</span>
+              <span class="chip">Jira &amp; Confluence</span>
+              <span class="chip">Agile / Scrum Methodologies</span>
+              <span class="chip">Cross-Functional Leadership</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Projects & Tooling Innovations -->
+    <section id="projects" class="section">
+      <div class="section__inner">
+        <div class="section__header">
+          <span class="section__eyebrow">Practical Innovations</span>
+          <h2 class="section__title">Featured Projects &amp; Tools</h2>
+          <p class="section__subtitle">Key engineering solutions, custom platform tooling, and software projects.</p>
+        </div>
+
+        <div class="projects-grid">
+          <!-- Project 1: Cloud Cost Optimizer -->
+          <div class="project-card">
+            <div class="project-card__top">
+              <span class="project-type-tag">Enterprise Cloud Tool</span>
+              <div class="project-metric-badge">40% Cost Savings</div>
+            </div>
+            <h3 class="project-card__title">Dev-Hours Cloud Cost Optimizer</h3>
+            <p class="project-card__desc">
+              Engineered an automated environment availability governance tool that automatically restricts non-production infrastructure uptime to active business hours while enabling engineering teams to scale up on demand via declarative YAML configurations.
+            </p>
+            <div class="project-card__footer">
+              <div class="tag-cloud">
+                <span class="tag">AWS</span>
+                <span class="tag">Python</span>
+                <span class="tag">YAML</span>
+                <span class="tag">FinOps</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 2: Multi-Helm Deployment Tool -->
+          <div class="project-card">
+            <div class="project-card__top">
+              <span class="project-type-tag">Platform Orchestrator</span>
+              <div class="project-metric-badge">1&ndash;2 Hour Spin-up</div>
+            </div>
+            <h3 class="project-card__title">Multi-Helm Deployment Engine</h3>
+            <p class="project-card__desc">
+              Developed an internal deployment automation tool capable of orchestrating multiple Helm releases simultaneously within a single pipeline run. Reduced net-new environment provisioning turnaround time from multiple days to just 1–2 hours.
+            </p>
+            <div class="project-card__footer">
+              <div class="tag-cloud">
+                <span class="tag">Go</span>
+                <span class="tag">Helm</span>
+                <span class="tag">Kubernetes</span>
+                <span class="tag">CI/CD</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 3: Network Configuration as Code -->
+          <div class="project-card">
+            <div class="project-card__top">
+              <span class="project-type-tag">Security &amp; Networking</span>
+              <div class="project-metric-badge">Full Audit Trail</div>
+            </div>
+            <h3 class="project-card__title">Network Config as Code Application</h3>
+            <p class="project-card__desc">
+              Created an internal application to manage network security configurations and firewall port openings between distributed systems. Replaced manual review tickets with code-tracked reviews, accelerating compliance audits.
+            </p>
+            <div class="project-card__footer">
+              <div class="tag-cloud">
+                <span class="tag">Go</span>
+                <span class="tag">AWS Security</span>
+                <span class="tag">GitOps</span>
+                <span class="tag">Auditing</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 4: AI Transformation Dashboards -->
+          <div class="project-card">
+            <div class="project-card__top">
+              <span class="project-type-tag">AI Workflows</span>
+              <div class="project-metric-badge">Executive Level</div>
+            </div>
+            <h3 class="project-card__title">AI-Driven Transformation Tracker</h3>
+            <p class="project-card__desc">
+              Partnered with executive leadership to deploy AI-enabled workflows leveraging Claude and autonomous agents. Dynamically aggregates cross-team engineering metrics to provide visibility into transformation program milestones.
+            </p>
+            <div class="project-card__footer">
+              <div class="tag-cloud">
+                <span class="tag">Claude AI</span>
+                <span class="tag">Autonomous Agents</span>
+                <span class="tag">Python</span>
+                <span class="tag">Airflow</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 5: Sahayak -->
+          <div class="project-card">
+            <div class="project-card__top">
+              <span class="project-type-tag">Mobile Application</span>
+              <div class="project-metric-badge">Offline Remote Access</div>
+            </div>
+            <h3 class="project-card__title">Sahayak — SMS Remote Device Controller</h3>
+            <p class="project-card__desc">
+              An Android application that empowers users to remotely access and control essential smartphone functions (fetching contact details, changing audio profiles, retrieving GPS coordinates) purely via encrypted SMS commands without an active data connection.
+            </p>
+            <div class="project-card__footer">
+              <div class="tag-cloud">
+                <span class="tag">Android</span>
+                <span class="tag">Java</span>
+                <span class="tag">SMS Protocol</span>
+                <span class="tag">Security</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 6: Reviewtter -->
+          <div class="project-card">
+            <div class="project-card__top">
+              <span class="project-type-tag">NLP / Sentiment Analysis</span>
+              <div class="project-metric-badge">Real-Time NLP</div>
+            </div>
+            <h3 class="project-card__title">Reviewtter — Sentiment Analysis Engine</h3>
+            <p class="project-card__desc">
+              Real-time sentiment polarity classifier for social media streams. Ingests live tweets regarding specific commercial products using the Twitter API, performs natural language processing, and classifies user sentiment trends.
+            </p>
+            <div class="project-card__footer">
+              <div class="tag-cloud">
+                <span class="tag">Python</span>
+                <span class="tag">Flask</span>
+                <span class="tag">NLP</span>
+                <span class="tag">Tweepy</span>
+                <span class="tag">TextBlob</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Certifications & Education -->
+    <section id="certifications" class="section section--alt">
+      <div class="section__inner">
+        <div class="section__header">
+          <span class="section__eyebrow">Qualifications</span>
+          <h2 class="section__title">Certifications &amp; Education</h2>
+        </div>
+
+        <div class="credentials-grid">
+          <!-- Cert 1: AWS -->
+          <div class="credential-card">
+            <div class="credential-card__icon credential-card__icon--aws" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+            </div>
+            <div class="credential-card__content">
+              <span class="credential-card__status">Active Credential</span>
+              <h3 class="credential-card__title">AWS Certified Solutions Architect &ndash; Associate</h3>
+              <p class="credential-card__issuer">Amazon Web Services (AWS)</p>
+              <p class="credential-card__meta">Validates expertise in designing resilient, high-performing, secure, and cost-optimized cloud architectures.</p>
+            </div>
+          </div>
+
+          <!-- Cert 2: Codility -->
+          <div class="credential-card">
+            <div class="credential-card__icon credential-card__icon--award" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg>
+            </div>
+            <div class="credential-card__content">
+              <span class="credential-card__status">Awarded 2 Times</span>
+              <h3 class="credential-card__title">Codility Silver Certificate</h3>
+              <p class="credential-card__issuer">Codility</p>
+              <p class="credential-card__meta">Demonstrates advanced algorithmic problem-solving speed, precision, and coding efficiency.</p>
+            </div>
+          </div>
+
+          <!-- Education -->
+          <div class="credential-card credential-card--full">
+            <div class="credential-card__icon credential-card__icon--edu" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+            </div>
+            <div class="credential-card__content">
+              <span class="credential-card__status">Aug 2014 &ndash; May 2018</span>
+              <h3 class="credential-card__title">Bachelor of Engineering (B.E.) in Computer Science &amp; Engineering</h3>
+              <p class="credential-card__issuer">Medicaps Institute of Science &amp; Technology, Indore (RGPV Bhopal)</p>
+              <p class="credential-card__meta"><strong>CGPA: 7.73</strong> &bull; Coursework: Algorithms, Data Structures, Operating Systems, Relational Databases, Object-Oriented Programming (OOPS).</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section section--contact">
+      <div class="section__inner">
+        <div class="contact-box">
+          <div class="contact-box__header">
+            <span class="section__eyebrow">Get In Touch</span>
+            <h2 class="contact-box__title">Let's Connect &amp; Collaborate</h2>
+            <p class="contact-box__desc">
+              Whether you are looking to architect scalable cloud platforms, modernize Kubernetes infrastructure, 
+              streamline GitOps pipelines, or discuss opportunities, feel free to reach out.
+            </p>
+          </div>
+
+          <div class="contact-methods">
+            <a class="contact-item" href="mailto:rbm897@gmail.com">
+              <div class="contact-item__icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              </div>
+              <div class="contact-item__info">
+                <span class="contact-item__label">Direct Email</span>
+                <span class="contact-item__value">rbm897@gmail.com</span>
+              </div>
+              <button class="contact-copy-btn copy-btn" data-copy="rbm897@gmail.com" type="button" aria-label="Copy email">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+              </button>
+            </a>
+
+            <div class="contact-item">
+              <div class="contact-item__icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              </div>
+              <div class="contact-item__info">
+                <span class="contact-item__label">Phone / WhatsApp</span>
+                <span class="contact-item__value">(+91) 9453038531</span>
+              </div>
+              <button class="contact-copy-btn copy-btn" data-copy="(+91) 9453038531" type="button" aria-label="Copy phone number">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+              </button>
+            </div>
+
+            <a class="contact-item" href="https://linkedin.com/in/rbm897" target="_blank" rel="noopener noreferrer">
+              <div class="contact-item__icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+              </div>
+              <div class="contact-item__info">
+                <span class="contact-item__label">LinkedIn Profile</span>
+                <span class="contact-item__value">linkedin.com/in/rbm897</span>
+              </div>
+              <span class="contact-arrow" aria-hidden="true">&rarr;</span>
+            </a>
+
+            <a class="contact-item" href="https://github.com/rbm897" target="_blank" rel="noopener noreferrer">
+              <div class="contact-item__icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+              </div>
+              <div class="contact-item__info">
+                <span class="contact-item__label">GitHub Repositories</span>
+                <span class="contact-item__value">github.com/rbm897</span>
+              </div>
+              <span class="contact-arrow" aria-hidden="true">&rarr;</span>
+            </a>
+          </div>
+
+          <div class="contact-box__cta">
+            <a class="btn btn--primary btn--large" href="assets/resume.pdf" download="Resume_Ram_Bhajan_Mishra.pdf">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              <span>Download Official Resume PDF</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <p>&copy; 2026 Ram Bhajan Mishra &bull; Senior DevOps &amp; Cloud Platform Engineer</p>
+      <div class="site-footer__links">
+        <a href="#top">Back to top &uarr;</a>
+        <span>&bull;</span>
+        <a href="https://github.com/rbm897" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <span>&bull;</span>
+        <a href="https://linkedin.com/in/rbm897" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast Notification for Copy Actions -->
+  <div id="toast" class="toast" role="status" aria-live="polite" aria-atomic="true">
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+    <span id="toast-message">Copied to clipboard!</span>
   </div>
-</nav>
 
-<section id="about" class="hero">
-  <div class="hero__inner">
-    <h1 class="hero__name">Ram Bhajan Mishra</h1>
-    <p class="hero__title">Senior DevOps Engineer</p>
-    <p class="hero__tagline">
-      7+ years building CI/CD pipelines, cloud infrastructure, and observability
-      platforms. Currently at Commonwealth Bank of Australia.
-    </p>
-    <div class="hero__actions">
-      <a class="btn btn--primary" href="#resume">View Resume</a>
-      <a class="btn" href="#contact">Contact</a>
-    </div>
-  </div>
-</section>
-
-<section id="skills" class="section">
-  <div class="section__inner">
-    <h2 class="section__title">Skills</h2>
-    <div class="skills-grid">
-      <div class="skill-card">
-        <h3>Programming Languages</h3>
-        <p>Go, JavaScript, Python, C, C++, Shell Scripting, Java</p>
-      </div>
-      <div class="skill-card">
-        <h3>Databases</h3>
-        <p>Postgres, MySQL, Cassandra, Oracle, MongoDB</p>
-      </div>
-      <div class="skill-card">
-        <h3>Cloud</h3>
-        <p>AWS, Azure</p>
-      </div>
-      <div class="skill-card">
-        <h3>CI/CD &amp; Orchestration</h3>
-        <p>Jenkins, ArgoCD, GitHub Actions, Kubernetes, Docker</p>
-      </div>
-      <div class="skill-card">
-        <h3>Infrastructure as Code</h3>
-        <p>Terraform, Crossplane, Helm, Helmfile, Hashicorp Vault</p>
-      </div>
-      <div class="skill-card">
-        <h3>Observability</h3>
-        <p>Prometheus, Grafana, OpenTelemetry, Jaeger, Opensearch, Sumologic, Kibana, Fluent Bit</p>
-      </div>
-      <div class="skill-card">
-        <h3>Messaging &amp; Tools</h3>
-        <p>SQS, SNS, Solace, Git, SVN, Jira, Confluence, Azure DevOps, Agile</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="resume" class="section">
-  <div class="section__inner">
-    <div class="resume-header">
-      <h2 class="section__title" style="margin-bottom:0;">Resume</h2>
-      <a class="btn btn--primary" href="assets/resume.pdf" download>Download PDF</a>
-    </div>
-
-    <div class="resume-entry">
-      <h3 class="resume-entry__title">Senior DevOps Engineer</h3>
-      <p class="resume-entry__meta"><span>Commonwealth Bank of Australia</span><span>Dec 2024 – Present</span></p>
-      <ul>
-        <li>Set up CI/CD pipelines to manage deployment for internal tools.</li>
-        <li>Deploy open source services with customizations per organizational tech and security standards.</li>
-        <li>Implemented observability using Prometheus, Grafana, and OpenTelemetry services like Jaeger.</li>
-      </ul>
-      <p class="resume-entry__skills"><strong>Key Skills:</strong> Go, Python, Shell Scripting, AWS, ArgoCD, Kubernetes, Docker, Terraform, Crossplane, Hashicorp Vault, Helm, Helmfile, GitHub Actions</p>
-    </div>
-
-    <div class="resume-entry">
-      <h3 class="resume-entry__title">Cloud Platform Engineer</h3>
-      <p class="resume-entry__meta"><span>Standard Chartered Nexus</span><span>Jul 2021 – Dec 2024</span></p>
-      <ul>
-        <li>Created reusable AWS service modules (RDS, OpenSearch, EKS, EKS NodeGroups, S3, etc.) enabling teams to provision infrastructure declaratively from YAML.</li>
-        <li>Built an internal tool to deploy multiple Helm releases in a single pipeline run, capable of spinning up a new environment in 1–2 hours.</li>
-        <li>Developed an application to manage network configuration (port openings between systems), tracked in code to improve audit and review.</li>
-        <li>Built a cost-optimization tool restricting environment availability to development hours, cutting environment running costs by 40%.</li>
-        <li>Upgraded AWS EKS clusters from 1.21 → 1.22 (in-place) and 1.22 → 1.25 (blue-green).</li>
-        <li>Led application and data migration of an entire stack between AWS regions for regulatory compliance.</li>
-        <li>Remediated infrastructure security findings identified during penetration testing.</li>
-        <li>Implemented a centralized logging pipeline (Fluent Bit, OpenSearch, OpenSearch Dashboards).</li>
-        <li>Managed 10+ environments across development, staging, and production.</li>
-        <li>Owned SSL/TLS certificate lifecycle: procurement, installation, renewal, troubleshooting.</li>
-        <li>Built CD pipelines for cloud resource provisioning via Terraform and Crossplane.</li>
-        <li>Designed CI/CD pipelines with Jenkins, ArgoCD, and Azure DevOps.</li>
-        <li>Configured and managed network infrastructure: firewalls, load balancers, VPNs.</li>
-        <li>Implemented centralized monitoring with Prometheus and Grafana.</li>
-      </ul>
-      <p class="resume-entry__skills"><strong>Key Skills:</strong> Go, Python, Shell Scripting, Postgres, Cassandra, AWS, Azure, Sumologic, Kibana, Solace, Jenkins, ArgoCD, Kubernetes, Docker, Terraform, Crossplane, Opensearch, Helm, ADO</p>
-    </div>
-
-    <div class="resume-entry">
-      <h3 class="resume-entry__title">Full Stack Developer</h3>
-      <p class="resume-entry__meta"><span>Mach-X Private Limited</span><span>Feb 2020 – Jun 2021</span></p>
-      <ul>
-        <li>Built the web UI and APIs powering the application: a React frontend, a Node backend, and a second backend in Python/Flask, plus two asynchronous Python services polling SQS.</li>
-        <li>Built a parser converting formatted financial-statement PDFs into Excel, feeding a machine learning model that predicted investment risk.</li>
-      </ul>
-      <p class="resume-entry__skills"><strong>Technology Used:</strong> React JS, Redux, Node JS, Express JS, Python, Flask, R, MySQL, AWS EC2, Load Balancers, SQS, SNS, Docker</p>
-    </div>
-
-    <div class="resume-entry">
-      <h3 class="resume-entry__title">Assistant System Engineer</h3>
-      <p class="resume-entry__meta"><span>TCS</span><span>Jul 2018 – Jan 2020</span></p>
-      <ul>
-        <li>Refactored codebase and improved development process.</li>
-        <li>Automated manual processes in a critical financial job, eliminating human error.</li>
-      </ul>
-      <p class="resume-entry__skills"><strong>Technology Used:</strong> Python, Oracle DB, SQL, Shell Scripting</p>
-    </div>
-
-    <div class="resume-subsection">
-      <h3>Projects</h3>
-      <div class="resume-entry">
-        <h4 class="resume-entry__title">Sahayak</h4>
-        <p>Android application enabling remote access to a phone via SMS from any other phone — fetching contact details, changing audio settings, getting location, and more.</p>
-      </div>
-      <div class="resume-entry">
-        <h4 class="resume-entry__title">Reviewtter</h4>
-        <p>Analyzed the sentiment polarity of tweets about a product to surface public feedback trends.</p>
-        <p class="resume-entry__skills"><strong>Technology Used:</strong> Natural Language Processing, Python, Flask, Tweepy, TextBlob</p>
-      </div>
-    </div>
-
-    <div class="resume-subsection">
-      <h3>Certifications</h3>
-      <ul>
-        <li>AWS Certified Solutions Architect – Associate (Mar 2023 – Mar 2026)</li>
-        <li>Codility Silver Certificate (2×)</li>
-      </ul>
-    </div>
-
-    <div class="resume-subsection">
-      <h3>Education</h3>
-      <div class="resume-entry">
-        <h4 class="resume-entry__title">B.E. in Computer Science and Engineering</h4>
-        <p class="resume-entry__meta"><span>Medicaps Institute of Science &amp; Technology, Indore (RGPV, Bhopal)</span><span>Aug 2014 – May 2018</span></p>
-        <p>CGPA 7.73. Coursework: Algorithms, Data Structures, Operating Systems, Database, OOPS.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="contact" class="section">
-  <div class="section__inner">
-    <h2 class="section__title">Contact</h2>
-    <ul class="contact-links">
-      <li><a href="mailto:rbm897@gmail.com">rbm897@gmail.com</a></li>
-      <li><a href="https://linkedin.com/in/rbm897" target="_blank" rel="noopener">LinkedIn</a></li>
-      <li><a href="https://github.com/rbm897" target="_blank" rel="noopener">GitHub</a></li>
-    </ul>
-  </div>
-</section>
-
-<footer class="site-footer">
-  <p>&copy; 2026 Ram Bhajan Mishra · <a href="https://github.com/rbm897">GitHub</a></p>
-</footer>
-
-<script src="script.js" defer></script>
+  <script src="script.js" defer></script>
 </body>
 </html>
